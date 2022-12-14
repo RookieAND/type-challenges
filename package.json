@@ -1,0 +1,12 @@
+{
+  "name": "type-challenges",
+  "version": "1.0.0",
+  "description": "type-challenges의 솔루션을 기술하는 패키지 입니다.",
+  "main": "index.js",
+  "repository": "https://github.com/RookieAND/type-challenges",
+  "author": "RookieAND",
+  "license": "MIT",
+  "devDependencies": {
+    "@type-challenges/utils": "^0.1.1"
+  }
+}

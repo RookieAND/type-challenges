@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "module": "CommonJS",
+        "target": "ES5",
+        "moduleResolution": "node",
+        "strict": true,
+        "esModuleInterop": true,
+        "outDir": "./dist",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "typeRoots": ["./src/types/index.d.ts", "./node_modules/@types"],
+        "baseUrl": ".",
+        "paths": {
+            "@/auth/*": ["src/auth/*"],
+            "@/constants/*": ["src/constants/*"],
+            "@/database/*": ["src/database/*"],
+            "@/errors/*": ["src/errors/*"],
+            "@/routes/*": ["src/routes/*"],
+            "@/types/*": ["src/types/*"],
+            "@/utils/*": ["src/utils/*"]
+        }
+    },
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules"]
+}
