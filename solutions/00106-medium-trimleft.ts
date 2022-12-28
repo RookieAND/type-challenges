@@ -8,10 +8,7 @@
  * TS 4.1 부터 추가된 Intrinsic String Manipulation Types : https://driip.me/5c2887ac-6eb6-4490-9f99-295614db6335
  */
 
-type TrimLeft<T extends string> = T extends
-	| ` ${infer R}`
-	| `\n${infer R}`
-	| `\t${infer R}`
+type TrimLeft<T extends string> = T extends `${" " | "\n" | "\t"}${infer R}`
 	? TrimLeft<R>
 	: T;
 

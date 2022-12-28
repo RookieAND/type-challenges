@@ -11,16 +11,10 @@
 
 type A<T extends string> = Capitalize<T>;
 
-type TrimLeft<T extends string> = T extends
-	| ` ${infer R}`
-	| `\n${infer R}`
-	| `\t${infer R}`
+type TrimLeft<T extends string> = T extends `${" " | "\n" | "\t"}${infer R}`
 	? TrimLeft<R>
 	: T;
-type TrimRight<T extends string> = T extends
-	| `${infer R} `
-	| `${infer R}\n`
-	| `${infer R}\t`
+type TrimRight<T extends string> = T extends `${infer R}${" " | "\n" | "\t"}`
 	? TrimRight<R>
 	: T;
 type Trim<T extends string> = TrimLeft<TrimRight<T>>;
