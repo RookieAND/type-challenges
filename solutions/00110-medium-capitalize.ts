@@ -1,42 +1,12 @@
 /**
  * 00110 - Solution
  *
- * 맨 앞 글자만을 템플릿 리터럴 타입으로 체크하여 소문자 범주 내에 들어가는지를 판별
- * 이후 Capitalize 유틸리티 타입으로 앞 글자를 대문자로 변경 (이는 TS 자체에서 구현된 기능이므로 )
+ * Capitalize 유틸리티 타입으로 앞 글자를 대문자로 변경 (이는 TS 자체에서 구현된 기능이므로 사용)
  */
 
-type UnderCase =
-	| "a"
-	| "b"
-	| "c"
-	| "d"
-	| "e"
-	| "f"
-	| "g"
-	| "h"
-	| "i"
-	| "j"
-	| "k"
-	| "l"
-	| "m"
-	| "n"
-	| "o"
-	| "p"
-	| "q"
-	| "r"
-	| "s"
-	| "t"
-	| "u"
-	| "v"
-	| "w"
-	| "x"
-	| "y"
-	| "z";
-
-type MyCapitalize<T extends string> =
-	T extends `${infer First extends UnderCase}${infer Rest}`
-		? `${Capitalize<First>}${Rest}`
-		: T;
+type MyCapitalize<T extends string> = T extends `${infer First}${infer Rest}`
+	? `${Capitalize<First>}${Rest}`
+	: T;
 
 /**
  *  Test Case
