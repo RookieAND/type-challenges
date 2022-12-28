@@ -1,16 +1,16 @@
 {
-    "compilerOptions": {
-        "module": "CommonJS",
-        "target": "ES5",
-        "moduleResolution": "node",
-        "strict": true,
-        "esModuleInterop": true,
-        "outDir": "./dist",
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "typeRoots": ["./node_modules/@types"],
-        "baseUrl": "."
-    },
-    "include": ["solutions/**/*.ts"],
-    "exclude": ["node_modules"]
+	"compilerOptions": {
+		"module": "CommonJS",
+		"target": "ES5",
+		"moduleResolution": "node",
+		"strict": true,
+		"esModuleInterop": true,
+		"outDir": "./dist",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"typeRoots": ["./node_modules/@types"],
+		"baseUrl": "."
+	},
+	"include": ["solutions/*.ts"],
+	"exclude": ["node_modules"]
 }
